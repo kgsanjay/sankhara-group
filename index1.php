@@ -343,7 +343,7 @@
             .then(data => {
                 if (data.success) {
                     alert(data.message);
-                    window.location.href = 'index.php';  // Redirect to index page
+                    window.location.href = './';  // Redirect to index page
                 } else {
                     alert(data.message);
                 }
