@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sankhara Digital</title>
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo/sh-logo.png" type="image/png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -237,11 +238,11 @@
                     </h2>
 
                     <!-- Multi-step Form -->
-                    <form id="multiStepForm">
+                    <form id="multiStepForm" method="POST" action="subscribe.php">
                         <!-- Step 1: Name -->
                         <div class="step" id="step-1">
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
                             </div>
                             <button type="button" class="btn btn-primary" id="next-1">Next</button>
                         </div>
@@ -249,7 +250,7 @@
                         <!-- Step 2: Phone Number -->
                         <div class="step hidden" id="step-2">
                             <div class="mb-3">
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number" required>
                             </div>
                             <button type="button" class="btn btn-secondary" id="prev-2">Previous</button>
                             <button type="button" class="btn btn-primary" id="next-2">Next</button>
@@ -258,7 +259,7 @@
                         <!-- Step 3: Email -->
                         <div class="step hidden" id="step-3">
                             <div class="mb-3">
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
                             </div>
                             <button type="button" class="btn btn-secondary" id="prev-3">Previous</button>
                             <button type="submit" class="btn btn-success">Submit</button>
@@ -269,6 +270,9 @@
         </div>
     </div>
 </section>
+
+
+
 <?php include 'footer.php' ?>
 
 
@@ -279,74 +283,75 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Get all step elements
-            const steps = Array.from(document.querySelectorAll('.step'));
-            let currentStep = 0;
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get all step elements
+        const steps = Array.from(document.querySelectorAll('.step'));
+        let currentStep = 0;
 
-            // Update step indicator
-            const updateStepIndicator = () => {
-                document.getElementById('stepIndicator').innerText = `STEP ${currentStep + 1} OF 3`;
-            };
+        // Update step indicator
+        const updateStepIndicator = () => {
+            document.getElementById('stepIndicator').innerText = `STEP ${currentStep + 1} OF 3`;
+        };
 
-            // Function to show current step and hide others
-            const showStep = (stepIndex) => {
-                steps.forEach((step, index) => {
-                    if (index === stepIndex) {
-                        step.classList.remove('hidden');
-                    } else {
-                        step.classList.add('hidden');
-                    }
-                });
-                updateStepIndicator();
-            };
-
-            // Show next step
-            document.getElementById('next-1').addEventListener('click', function () {
-                if (document.getElementById('name').value) {
-                    currentStep = 1;
-                    showStep(currentStep);
+        // Function to show current step and hide others
+        const showStep = (stepIndex) => {
+            steps.forEach((step, index) => {
+                if (index === stepIndex) {
+                    step.classList.remove('hidden');
                 } else {
-                    alert('Please enter your name.');
+                    step.classList.add('hidden');
                 }
             });
+            updateStepIndicator();
+        };
 
-            // Show next step
-            document.getElementById('next-2').addEventListener('click', function () {
-                if (document.getElementById('phone').value) {
-                    currentStep = 2;
-                    showStep(currentStep);
-                } else {
-                    alert('Please enter your phone number.');
-                }
-            });
-
-            // Show previous step from Step 2
-            document.getElementById('prev-2').addEventListener('click', function () {
-                currentStep = 0;
-                showStep(currentStep);
-            });
-
-            // Show previous step from Step 3
-            document.getElementById('prev-3').addEventListener('click', function () {
+        // Show next step
+        document.getElementById('next-1').addEventListener('click', function () {
+            if (document.getElementById('name').value) {
                 currentStep = 1;
                 showStep(currentStep);
-            });
+            } else {
+                alert('Please enter your name.');
+            }
+        });
 
-            // Form submission (final step)
-            document.getElementById('multiStepForm').addEventListener('submit', function (event) {
-                event.preventDefault();
-                if (document.getElementById('email').value) {
-                    alert('Form submitted successfully!');
-                } else {
-                    alert('Please enter your email.');
-                }
-            });
+        // Show next step
+        document.getElementById('next-2').addEventListener('click', function () {
+            if (document.getElementById('phone').value) {
+                currentStep = 2;
+                showStep(currentStep);
+            } else {
+                alert('Please enter your phone number.');
+            }
+        });
 
-            // Initial display of step 1
+        // Show previous step from Step 2
+        document.getElementById('prev-2').addEventListener('click', function () {
+            currentStep = 0;
             showStep(currentStep);
         });
-    </script>
+
+        // Show previous step from Step 3
+        document.getElementById('prev-3').addEventListener('click', function () {
+            currentStep = 1;
+            showStep(currentStep);
+        });
+
+        // Form submission (final step)
+        document.getElementById('multiStepForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            if (document.getElementById('email').value) {
+                alert('Form submitted successfully!');
+                this.submit();  // Proceed with form submission
+            } else {
+                alert('Please enter your email.');
+            }
+        });
+
+        // Initial display of step 1
+        showStep(currentStep);
+    });
+</script>
 
 <!-- Owl Carousel Initialization Script -->
 <script>
