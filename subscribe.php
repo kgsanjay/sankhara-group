@@ -3,17 +3,18 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Include PHPMailer classes
-require 'admin/vendor/autoload.php'; // Using Composer
+require 'admin/vendor/autoload.php'; // Adjust the path if necessary
+
+$response = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the form data
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-    $phone = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
-    $subscriberEmail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    // Get and sanitize form data
+    $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
+    $phone = filter_var(trim($_POST['phone']), FILTER_SANITIZE_STRING);
+    $subscriberEmail = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
 
     // Validate the email address
     if (filter_var($subscriberEmail, FILTER_VALIDATE_EMAIL)) {
-
         // Hostinger SMTP configuration
         $smtpHost = 'smtp.hostinger.com';
         $smtpUsername = 'info@sankharagroup.com'; // Your Hostinger email
@@ -23,28 +24,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Create a new PHPMailer instance
         $mail = new PHPMailer(true);
+        $ownerMailSent = false;
+        $subscriberMailSent = false;
 
         try {
-            // Server settings
-            $mail->isSMTP();                                         // Set mailer to use SMTP
-            $mail->Host = $smtpHost;                                // Hostinger SMTP server
-            $mail->SMTPAuth = true;                                 // Enable SMTP authentication
-            $mail->Username = $smtpUsername;                        // Hostinger SMTP username
-            $mail->Password = $smtpPassword;                        // Hostinger SMTP password
-            $mail->SMTPSecure = $smtpEncryption;                    // Enable SSL or TLS encryption
-            $mail->Port = $smtpPort;                                // TCP port to connect (465 for SSL)
+            // Server settings for owner email
+            $mail->isSMTP();
+            $mail->Host = $smtpHost;
+            $mail->SMTPAuth = true;
+            $mail->Username = $smtpUsername;
+            $mail->Password = $smtpPassword;
+            $mail->SMTPSecure = $smtpEncryption;
+            $mail->Port = $smtpPort;
 
             // Send email to the website owner
             $mail->setFrom($smtpUsername, 'Sankhara Group');
-            $mail->addAddress($smtpUsername);                       // Add recipient (owner)
+            $mail->addAddress($smtpUsername);
             $mail->Subject = "New Subscription Notification";
-            $mail->Body    = "A new user has subscribed to the website.\n\nName: $name\nPhone: $phone\nSubscriber email: $subscriberEmail";
+            $mail->Body = "A new user has subscribed to the website.\n\nName: $name\nPhone: $phone\nSubscriber email: $subscriberEmail";
 
             $mail->send();
             $ownerMailSent = true;
         } catch (Exception $e) {
-            // Log error message or handle it accordingly
-            $ownerMailSent = false;
             error_log("Mailer Error (Owner): " . $mail->ErrorInfo);
         }
 
@@ -52,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $subscriberMail = new PHPMailer(true);
 
         try {
-            // Server settings (same as above)
+            // Server settings for subscriber email
             $subscriberMail->isSMTP();
             $subscriberMail->Host = $smtpHost;
             $subscriberMail->SMTPAuth = true;
@@ -63,28 +64,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Send confirmation email to the subscriber
             $subscriberMail->setFrom($smtpUsername, 'Sankhara Group');
-            $subscriberMail->addAddress($subscriberEmail);          // Add recipient (subscriber)
+            $subscriberMail->addAddress($subscriberEmail);
             $subscriberMail->Subject = "Thank you for subscribing!";
-            $subscriberMail->Body    = "Hello $name,\n\nThank you for subscribing to our updates. We will notify you with the latest news and updates.\n\nBest regards,\nSankhara Group";
+            $subscriberMail->Body = "Hello $name,\n\nThank you for subscribing to our updates. We will notify you with the latest news and updates.\n\nBest regards,\nSankhara Group";
 
             $subscriberMail->send();
             $subscriberMailSent = true;
         } catch (Exception $e) {
-            // Log error message or handle it accordingly
-            $subscriberMailSent = false;
             error_log("Mailer Error (Subscriber): " . $subscriberMail->ErrorInfo);
         }
 
         // Check if both emails were sent successfully
         if ($ownerMailSent && $subscriberMailSent) {
-            echo "Thank you for subscribing! We will notify you.";
+            $response['success'] = true;
+            $response['message'] = "Thank you for subscribing! We will notify you.";
         } else {
-            echo "There was an error sending the emails. Please try again.";
+            $response['success'] = false;
+            $response['message'] = "There was an error sending the emails. Please try again.";
         }
     } else {
-        echo "Invalid email address. Please enter a valid email.";
+        $response['success'] = false;
+        $response['message'] = "Invalid email address. Please enter a valid email.";
     }
 } else {
-    echo "Invalid request method.";
+    $response['success'] = false;
+    $response['message'] = "Invalid request method.";
 }
+
+// Return JSON response
+header('Content-Type: application/json');
+echo json_encode($response);
 ?>

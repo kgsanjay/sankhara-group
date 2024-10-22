@@ -273,6 +273,9 @@
 
 
 
+
+
+
 <?php include 'footer.php' ?>
 
 
@@ -284,30 +287,22 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Get all step elements
         const steps = Array.from(document.querySelectorAll('.step'));
         let currentStep = 0;
 
-        // Update step indicator
         const updateStepIndicator = () => {
             document.getElementById('stepIndicator').innerText = `STEP ${currentStep + 1} OF 3`;
         };
 
-        // Function to show current step and hide others
         const showStep = (stepIndex) => {
             steps.forEach((step, index) => {
-                if (index === stepIndex) {
-                    step.classList.remove('hidden');
-                } else {
-                    step.classList.add('hidden');
-                }
+                step.classList.toggle('hidden', index !== stepIndex);
             });
             updateStepIndicator();
         };
 
-        // Show next step
         document.getElementById('next-1').addEventListener('click', function () {
-            if (document.getElementById('name').value) {
+            if (document.getElementById('name').value.trim()) {
                 currentStep = 1;
                 showStep(currentStep);
             } else {
@@ -315,9 +310,8 @@
             }
         });
 
-        // Show next step
         document.getElementById('next-2').addEventListener('click', function () {
-            if (document.getElementById('phone').value) {
+            if (document.getElementById('phone').value.trim()) {
                 currentStep = 2;
                 showStep(currentStep);
             } else {
@@ -325,34 +319,44 @@
             }
         });
 
-        // Show previous step from Step 2
         document.getElementById('prev-2').addEventListener('click', function () {
             currentStep = 0;
             showStep(currentStep);
         });
 
-        // Show previous step from Step 3
         document.getElementById('prev-3').addEventListener('click', function () {
             currentStep = 1;
             showStep(currentStep);
         });
 
-        // Form submission (final step)
+        // Handle form submission via AJAX
         document.getElementById('multiStepForm').addEventListener('submit', function (event) {
             event.preventDefault();
-            if (document.getElementById('email').value) {
-                alert('Form submitted successfully!');
-                this.submit();  // Proceed with form submission
-            } else {
-                alert('Please enter your email.');
-            }
+            
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: this.method,
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message);
+                    window.location.href = 'index.php';  // Redirect to index page
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+            });
         });
 
-        // Initial display of step 1
         showStep(currentStep);
     });
 </script>
-
 <!-- Owl Carousel Initialization Script -->
 <script>
     $(document).ready(function(){
