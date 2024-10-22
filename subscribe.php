@@ -1,90 +1,61 @@
 <?php
+// Include PHPMailer using Composer's autoload
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// Include PHPMailer classes
-require 'admin/vendor/autoload.php'; // Using Composer
-// If using manual inclusion, uncomment and use the following:
-// require 'path/to/PHPMailer/src/PHPMailer.php';
-// require 'path/to/PHPMailer/src/SMTP.php';
-// require 'path/to/PHPMailer/src/Exception.php';
+require 'admin/vendor/autoload.php'; // Ensure Composer is installed and PHPMailer is required correctly
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the form data
+    // Sanitize and validate input fields
     $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $phone = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
     $subscriberEmail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
-    // Validate the email address
+    // Check if the email is valid
     if (filter_var($subscriberEmail, FILTER_VALIDATE_EMAIL)) {
+        
+        // SMTP configuration
+        $smtpHost = 'smtp.hostinger.com'; // Hostinger SMTP server
+        $smtpUsername = 'info@sankharagroup.com'; // SMTP email username
+        $smtpPassword = 'Sankhara@1'; // SMTP email password
+        $smtpPort = 465; // Port for SSL
+        $smtpEncryption = 'ssl'; // Use 'ssl' for SSL connection
 
-        // Hostinger SMTP configuration
-        $smtpHost = 'smtp.hostinger.com';
-        $smtpUsername = 'info@sankharagroup.com'; // Your Hostinger email
-        $smtpPassword = 'Sankhara@1'; // Your Hostinger email password
-        $smtpPort = 465; // Use 465 for SSL or 587 for TLS
-        $smtpEncryption = 'ssl'; // SSL encryption for port 465, or 'tls' for port 587
-
-        // Create a new PHPMailer instance for the owner
+        // Create a new PHPMailer instance
         $mail = new PHPMailer(true);
 
         try {
             // Server settings
-            $mail->isSMTP();                                          // Set mailer to use SMTP
-            $mail->Host = $smtpHost;                                  // Hostinger SMTP server
-            $mail->SMTPAuth = true;                                   // Enable SMTP authentication
-            $mail->Username = $smtpUsername;                          // Hostinger SMTP username
-            $mail->Password = $smtpPassword;                          // Hostinger SMTP password
-            $mail->SMTPSecure = $smtpEncryption;                      // SSL or TLS encryption
-            $mail->Port = $smtpPort;                                  // TCP port to connect (465 for SSL)
+            $mail->isSMTP(); // Set mailer to use SMTP
+            $mail->Host = $smtpHost; // Specify SMTP server
+            $mail->SMTPAuth = true; // Enable SMTP authentication
+            $mail->Username = $smtpUsername; // SMTP username
+            $mail->Password = $smtpPassword; // SMTP password
+            $mail->SMTPSecure = $smtpEncryption; // Enable SSL encryption
+            $mail->Port = $smtpPort; // TCP port to connect
 
-            // Send email to the website owner
-            $mail->setFrom('no-reply@sankharagroup.com', 'Sankhara Group');
-            $mail->addAddress('info@sankharagroup.com');              // Add recipient (owner)
-            $mail->Subject = "New Subscription Notification";
-            $mail->Body    = "A new user has subscribed to the website.\n\nName: $name\nPhone: $phone\nSubscriber email: $subscriberEmail";
+            // Enable verbose debug output for troubleshooting
+            $mail->SMTPDebug = 2; // 2 for full debug output
 
-            $mail->send();
-            $ownerMailSent = true;
+            // Recipients
+            $mail->setFrom('no-reply@sankharagroup.com', 'Sankhara Group'); // Set sender email and name
+            $mail->addAddress('info@sankharagroup.com'); // Add a recipient (can add multiple)
+
+            // Content
+            $mail->isHTML(false); // Set email format to plain text
+            $mail->Subject = "New Subscription Notification"; // Set email subject
+            $mail->Body = "A new user has subscribed to the website.\n\nName: $name\nPhone: $phone\nSubscriber email: $subscriberEmail"; // Email body content
+
+            // Send email
+            if ($mail->send()) {
+                echo "Email sent successfully."; // Success message
+            }
         } catch (Exception $e) {
-            $ownerMailSent = false;
-        }
-
-        // Create another PHPMailer instance for the subscriber
-        $subscriberMail = new PHPMailer(true);
-
-        try {
-            // Server settings (same as above)
-            $subscriberMail->isSMTP();
-            $subscriberMail->Host = $smtpHost;
-            $subscriberMail->SMTPAuth = true;
-            $subscriberMail->Username = $smtpUsername;
-            $subscriberMail->Password = $smtpPassword;
-            $subscriberMail->SMTPSecure = $smtpEncryption;
-            $subscriberMail->Port = $smtpPort;
-
-            // Send confirmation email to the subscriber
-            $subscriberMail->setFrom('info@sankharagroup.com', 'Sankhara Group');
-            $subscriberMail->addAddress($subscriberEmail);            // Add recipient (subscriber)
-            $subscriberMail->Subject = "Thank you for subscribing!";
-            $subscriberMail->Body    = "Hello $name,\n\nThank you for subscribing to our updates. We will notify you with the latest news and updates.\n\nBest regards,\nSankhara Group";
-
-            $subscriberMail->send();
-            $subscriberMailSent = true;
-        } catch (Exception $e) {
-            $subscriberMailSent = false;
-        }
-
-        // Check if both emails were sent successfully
-        if ($ownerMailSent && $subscriberMailSent) {
-            echo "Thank you for subscribing! We will notify you.";
-        } else {
-            echo "There was an error sending the emails. Please try again.";
+            // Display error message if email fails to send
+            echo "Mailer Error: " . $mail->ErrorInfo;
         }
     } else {
-        echo "Invalid email address. Please enter a valid email.";
+        echo "Invalid email address."; // Error if email validation fails
     }
-} else {
-    echo "Invalid request method.";
 }
 ?>
