@@ -1,13 +1,8 @@
-# Enable the rewrite engine
 RewriteEngine On
 
-# Set the base URL for the application
-RewriteBase /sankharagroup.com/
+# Rewrite if the URL is not a directory and not a file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
 
-# Remove .php extension from URLs
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php [L]
-
-# Optionally, redirect .php URLs to non-.php URLs
-RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
-RewriteRule ^ %1 [R=301,L]
+# Rewrite all requests that don't have an extension to include .php
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
