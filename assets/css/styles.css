@@ -368,12 +368,12 @@ body {
 /*================== footer ======================*/
 .footer .social-icons a {
     font-size: 1.25rem;
-    color: #495057; /* Adjust the color to match your design */
+    color: var(--dark-gray-color); /* Adjust the color to match your design */
     transition: color 0.3s ease;
 }
 
 .footer .social-icons a:hover {
-    color: #4CAF50; /* Highlight color on hover */
+    color: var(--primary-color); /* Highlight color on hover */
 }
 
 

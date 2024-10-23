@@ -19,15 +19,8 @@
                         <li><a class="dropdown-item" href="#">Support</a></li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="about" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        About Us
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
-                        <li><a class="dropdown-item" href="#">Our Team</a></li>
-                        <li><a class="dropdown-item" href="#">Our Story</a></li>
-                        <li><a class="dropdown-item" href="#">Mission & Vision</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Insights</a>
@@ -36,7 +29,7 @@
                     <a class="nav-link" href="#">Careers</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="btn btn-custom">Contact</a>
+                    <a href="contact" class="btn btn-custom">Contact</a>
                 </li>
             </ul>
         </div>

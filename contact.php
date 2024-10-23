@@ -100,7 +100,7 @@
 
     <!-- Blog Section -->
     <section class="blog mt-5 mb-3">
-    <div class="container">
+    <div class="container wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
         <div class="blog-section-title">
             <h4 class="bg-light p-1">Blogs that make unleashing Impact.</h4>
         </div>
