@@ -33,7 +33,7 @@
             <div class="col-md-3 mb-4">
                 <h5 class="fw-bold">License</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-muted">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions" class="text-muted">Privacy Policy</a></li>
                     <li><a href="#" class="text-muted">Copyright</a></li>
                     <li><a href="terms-and-conditions" class="text-muted">Terms and conditions</a></li>
                 </ul>
