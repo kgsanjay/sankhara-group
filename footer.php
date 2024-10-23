@@ -35,7 +35,7 @@
                 <ul class="list-unstyled">
                     <li><a href="#" class="text-muted">Privacy Policy</a></li>
                     <li><a href="#" class="text-muted">Copyright</a></li>
-                    <li><a href="#" class="text-muted">Terms and conditions</a></li>
+                    <li><a href="terms-and-conditions" class="text-muted">Terms and conditions</a></li>
                 </ul>
             </div>
 
