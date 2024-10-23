@@ -14,7 +14,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#">Digital</a></li>
-                        <li><a class="dropdown-item" href="#">Tech</a></li>
+                        <li><a class="dropdown-item" href="sankhara-tech">Tech</a></li>
                         <li><a class="dropdown-item" href="#">Courses</a></li>
                         <li><a class="dropdown-item" href="#">Support</a></li>
                     </ul>
