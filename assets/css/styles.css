@@ -652,7 +652,7 @@ body {
 }
 
 /*================= sankhara tech =========================*/
-.stat-box {
+.stat-box1 {
             background-color: var(--primary-color);
             color: #fff;
             display: flex;  /* Enable Flexbox */
@@ -665,7 +665,7 @@ body {
             border-radius: 10px;  /* Optional: Add rounded corners */
         }
 
-        .video-wrapper {
+        .video-wrapper1 {
             display: flex;  /* Enable Flexbox */
             justify-content: center;  /* Center video horizontally */
             align-items: center;  /* Center video vertically */
@@ -673,12 +673,12 @@ body {
             overflow: hidden;  /* Ensure no overflow */
         }
 
-        .stat-video {
+        .stat-video1 {
             width: 100%;  /* Make the video fill the wrapper */
             height: auto;  /* Maintain aspect ratio */
         }
 
-        .statistics-row {
+        .statistics-row1 {
             display: flex;  /* Enable Flexbox for row */
             align-items: stretch;  /* Make all columns stretch to the same height */
         }

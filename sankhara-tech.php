@@ -40,16 +40,16 @@
     <!-- Statistics Section -->
     <section class="bg-white py-5">
         <div class="container">
-            <div class="row text-center">
+            <div class="row text-center statistics-row1">
                 <div class="col-md-3 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <div class="stat-box">
+                    <div class="stat-box1">
                         <h4 align="left">Website is work in progress</h4>
                         <p class="text-light" align="left">project finish with superbly</p>
                     </div>
                 </div>
                 <div class="col-md-9 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                    <div class="video-wrapper">
-                        <video class="stat-video rounded" muted autoplay>
+                    <div class="video-wrapper1">
+                        <video class="stat-video1 rounded" muted autoplay>
                             <source src="assets/images/video/sankhara-tech.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
