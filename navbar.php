@@ -26,7 +26,7 @@
                     <a class="nav-link" href="#">Insights</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Careers</a>
+                    <a class="nav-link" href="careers">Careers</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact" class="btn btn-custom">Contact</a>
