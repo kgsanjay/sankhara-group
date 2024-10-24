@@ -27,8 +27,8 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <p class="sg-about-tagline">Sankhara Tech</p>
-                    <h2 class="sg-about-title">Shankara Tech Launches Innovative AI Tool for Enhanced Data Analysis</h2>
+                    <p class="sg-about-tagline">Sankhara Production</p>
+                    <h2 class="sg-about-title">Sankhara Production Launches Innovative AI Tool for Enhanced Data Analysis</h2>
                 </div>
                 <div class="col-lg-6 wow animate__animated animate__fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
                     <p>Lorem ipsum dolor sit amet consectetur. Ac sed viverra at enim auctor consectetur. Tortor tellus adipiscing aliquet nisi eget id porta. Vel non elementum ipsum vulputate. Vitae metus eget pellentesque integer diam massa lacus phasellus. Habitasse convallis suspendisse cursus sit lobortis vitae sit sit amet. Bibendum tempus eget vel eleifend at. Purus sed sagittis diam habitasse. Consequat in netus vulputate tincidunt elit eget pellentesque. Eu eget maecenas posuere eget nunc tortor faucibus varius. Mauris semper nullam arcu id mauris netus lobortis laoreet. Tellus urna tempor lacus sed eget viverra aliquam amet. Tortor gravida libero odio erat eu suscipit faucibus arcu donec. In est elementum sagittis vel massa duis. Nullam gravida sed pharetra egestas cursus nullam quam.</p>

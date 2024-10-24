@@ -13,11 +13,11 @@ body {
 .navbar {
     background-color: #ffffff; /* Background color */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
-    padding: 1rem 2rem; /* Padding for navbar */
+/*    padding: 1rem 2rem; /* Padding for navbar */*/
 }
 
 .navbar-brand img {
-    height: 50px; /* Logo height */
+    height: 80px; /* Logo height */
 }
 
 .navbar-nav .nav-link {
@@ -353,7 +353,7 @@ body {
 
 .contact .form-control {
     background-color: #e9ecef;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--primary-color);
     height: 48px;
 }
 
@@ -386,7 +386,7 @@ body {
 
 .sg-about-tagline {
   font-size: 1rem;
-  color: #6c757d;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
@@ -497,7 +497,7 @@ body {
 }
 
 .btn-green {
-  background-color: #006400;
+  background-color: var(--primary-color);
   color: white;
   border-radius: 8px;
   padding: 10px 20px;
@@ -505,7 +505,7 @@ body {
 }
 
 .btn-green:hover {
-  background-color: #005000;
+  background-color: var(--dark-gray-color);
 }
 
 .our-team-right {
@@ -681,4 +681,56 @@ body {
         .statistics-row1 {
             display: flex;  /* Enable Flexbox for row */
             align-items: stretch;  /* Make all columns stretch to the same height */
+        }
+
+/*====================== careers job =============================*/
+.accordion-button {
+            display: flex;
+            align-items: center;
+            width: auto; /* Adjust the width */
+            padding-left: 0;
+            padding-right: 10px;
+            font-weight: 500;
+            color: #023d6b;
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: transparent;
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            margin-left: 10px;
+            color: #023d6b;
+        }
+
+        .location {
+            display: flex;
+            gap: 10px;
+            color: #9da5ae;
+            font-size: 0.9rem;
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e9ecef;
+            padding: 10px 0;
+        }
+
+        .accordion-item {
+            border: none;
+        }
+
+        .job-info {
+            display: flex;
+            align-items: center;
         }
