@@ -1,13 +1,214 @@
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYBLACKITALIC.otf") format("opentype");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYBOLD.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYHEAVYITALIC.otf") format("opentype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYLIGHTITALIC.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYMEDIUM.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYREGULAR.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYSEMIBOLDITALIC.otf") format("opentype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYTHINITALIC.otf") format("opentype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "SF Pro Display";
+    src: url("../font/SFPRODISPLAYULTRALIGHTITALIC.otf") format("opentype");
+    font-weight: 200;
+    font-style: italic;
+}
+
 :root {
-    --font-family: 'Arial', sans-serif; /* Base font family */
+    --font-sf-black-italic: "SF Pro Display", sans-serif;
+    --font-sf-bold: "SF Pro Display", sans-serif;
+    --font-sf-heavy-italic: "SF Pro Display", sans-serif;
+    --font-sf-light-italic: "SF Pro Display", sans-serif;
+    --font-sf-medium: "SF Pro Display", sans-serif;
+    --font-sf-regular: "SF Pro Display", sans-serif;
+    --font-sf-semibold-italic: "SF Pro Display", sans-serif;
+    --font-sf-thin-italic: "SF Pro Display", sans-serif;
+    --font-sf-ultralight-italic: "SF Pro Display", sans-serif;
+
+    /* Define font weights and styles */
+    --weight-black-italic: 900;
+    --weight-bold: bold;
+    --weight-heavy-italic: 800;
+    --weight-light-italic: 300;
+    --weight-medium: 500;
+    --weight-regular: normal;
+    --weight-semibold-italic: 600;
+    --weight-thin-italic: 100;
+    --weight-ultralight-italic: 200;
+
+    /* Define font styles */
+    --style-italic: italic;
+    --style-normal: normal;
+
     --primary-color: #013220; /* Dark green from SH logo */
+    --color-100: rgba(8, 52, 36, 1);    /* 100% opacity */
+    --color-95: rgba(8, 52, 36, 0.95);   /* 95% opacity */
+    --color-90: rgba(8, 52, 36, 0.9);    /* 90% opacity */
+    --color-85: rgba(8, 52, 36, 0.85);   /* 85% opacity */
+    --color-80: rgba(8, 52, 36, 0.8);    /* 80% opacity */
+    --color-75: rgba(8, 52, 36, 0.75);   /* 75% opacity */
+    --color-70: rgba(8, 52, 36, 0.7);    /* 70% opacity */
+    --color-65: rgba(8, 52, 36, 0.65);   /* 65% opacity */
+    --color-60: rgba(8, 52, 36, 0.6);    /* 60% opacity */
+    --color-55: rgba(8, 52, 36, 0.55);   /* 55% opacity */
+    --color-50: rgba(8, 52, 36, 0.5);    /* 50% opacity */
+    --color-45: rgba(8, 52, 36, 0.45);   /* 45% opacity */
+    --color-40: rgba(8, 52, 36, 0.4);    /* 40% opacity */
+    --color-35: rgba(8, 52, 36, 0.35);   /* 35% opacity */
+    --color-30: rgba(8, 52, 36, 0.3);    /* 30% opacity */
+    --color-25: rgba(8, 52, 36, 0.25);   /* 25% opacity */
+    --color-20: rgba(8, 52, 36, 0.2);    /* 20% opacity */
+    --color-15: rgba(8, 52, 36, 0.15);   /* 15% opacity */
+    --color-10: rgba(8, 52, 36, 0.1);    /* 10% opacity */
+    --color-5:  rgba(8, 52, 36, 0.05);   /* 5% opacity */
     --dark-gray-color: #323232; /* Dark Gray from design */
     --light-gary-color: #D9D9D9; /* light gray from design  */
 }
 
+
+
 body {
-    font-family: var(--font-family);
+    font-family: var(--font-sf-regular);
     margin: 0;
+    background-color: #FCFDFC;
+}
+
+/* Custom responsive container */
+.custom-container {
+    max-width: 1400px; /* Maximum width for larger screens */
+    margin: 0 auto; /* Center the container */
+}
+
+@media (max-width: 1200px) {
+    .custom-container {
+        max-width: 90%; /* Adjust width for screens smaller than 1200px */
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-container {
+        max-width: 95%; /* Adjust width for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-container {
+        max-width: 100%; /* Full width for mobile */
+    }
+}
+
+
+.section-title{
+    color: var(--primary-color);
+}
+
+.bg-5{
+    background-color: var(--color-5);
+}
+.bg-10{
+    background-color: var(--color-10);
+}
+.bg-15{
+    background-color: var(--color-15);
+}
+.bg-20{
+    background-color: var(--color-20);
+}
+.bg-25{
+    background-color: var(--color-25);
+}
+.bg-30{
+    background-color: var(--color-30);
+}
+.bg-35{
+    background-color: var(--color-35);
+}
+.bg-40{
+    background-color: var(--color-40);
+}
+.bg-45{
+    background-color: var(--color-45);
+}
+.bg-50{
+    background-color: var(--color-50);
+}
+.bg-55{
+    background-color: var(--color-55);
+}
+.bg-60{
+    background-color: var(--color-60);
+}
+.bg-65{
+    background-color: var(--color-65);
+}
+.bg-70{
+    background-color: var(--color-70);
+}
+.bg-75{
+    background-color: var(--color-75);
+}
+.bg-80{
+    background-color: var(--color-80);
+}
+.bg-85{
+    background-color: var(--color-85);
+}
+.bg-90{
+    background-color: var(--color-90);
+}
+.bg-95{
+    background-color: var(--color-95);
+}
+
+.gradient-background {
+    background: linear-gradient(to bottom, var(--color-100), #000000);
 }
 
 .navbar {
@@ -17,17 +218,18 @@ body {
 }
 
 .navbar-brand img {
-    height: 80px; /* Logo height */
+    height: 50px; /* Logo height */
 }
 
 .navbar-nav .nav-link {
     color: var(--primary-color); /* Dark green text color */
-    font-weight: 600; /* Font weight */
+    font-weight: 400; /* Font weight */
     margin-right: 20px; /* Spacing between links */
 }
 
 .navbar-nav .nav-link:hover {
-    color: var(--dark-gray-color); /* Dark Gary hover color */
+    font-weight: bold;
+    color: var(--primary-color); /* Dark Gary hover color */
 }
 
 .d-flex a {
@@ -62,21 +264,93 @@ body {
     color: white; /* Keep text color white on hover */
 }
 
+.text-custom{
+    color: var(--primary-color);
+}
+
 
 /*=========== Hero section ==============*/
 .hero {
-    background-color: #FCFDFC; /* Light background */
-    padding: 40px 20px; /* Increase padding for spacious feel */
+    padding: 20px 20px; /* Increase padding for spacious feel */
     text-align: center; /* Center-align text */
+}
+
+.hero-content{
+    padding: 0 350px; /* Add padding on the left and right sides */
+    line-height: 1; /* Improve readability with line height */
+    text-align: center; /* Center-align the text */
+}
+.hero-img{
+    padding: 0 150px;
+    align-items: center;
+}
+
+.logo-section2 {
+    position: relative;
+    margin-top: -50px; /* Overlap the video slightly */
+    z-index: 1; /* Ensure logo appears above the background */
+}
+
+.logo-section2 .logo-container {
+    display: inline-block;
+    background: #ffffff; /* White background for the logo */
+    border-radius: 50%; /* Circular shape */
+    padding: 20px; /* Padding around the logo */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.logo-section2 .logo img {
+    width: 60px; /* Adjust logo size as needed */
+    height: auto;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content {
+        font-size: 1.25rem; /* Adjust font size for smaller screens */
+        padding: 0 20px; /* Reduce padding on smaller screens */
+    }
+    .hero-img{
+        padding: 0 30px;
+        align-items: center;
+    }
+    .logo-section2 {
+    position: relative;
+    margin-top: -30px; /* Overlap the video slightly */
+    z-index: 1; /* Ensure logo appears above the background */
+}
+
+    .logo-section2 .logo-container {
+        padding: 15px; /* Reduce padding for smaller logo on smaller screens */
+    }
+
+    .logo-section2 .logo img {
+        width: 60px; /* Decrease logo size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        font-size: 1rem; /* Further reduce font size for mobile */
+        padding: 0 10px; /* Further reduce padding on very small screens */
+    }
+    .hero-img{
+        padding: 0 5px;
+        align-items: center;
+    }
+
+    .logo-section2 .logo img {
+        width: 30px; /* Further decrease logo size for very small screens */
+    }
 }
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 30.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
     height: 0;
     overflow: hidden;
     border-radius: 8px; /* Rounded corners for the video */
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     margin-bottom: 30px; /* Space below the video */
 }
 
@@ -86,12 +360,12 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Ensure the video covers the container */
 }
-
 
 .logo-section {
     position: relative;
-    margin-top: -100px; /* Overlap the video slightly */
+    margin-top: -75px; /* Overlap the video slightly */
     z-index: 1; /* Ensure logo appears above the background */
 }
 
@@ -104,33 +378,58 @@ body {
 }
 
 .logo img {
-    width: 100px; /* Adjust logo size as needed */
+    width: 60px; /* Adjust logo size as needed */
     height: auto;
 }
 
 .hero-description {
     font-size: 1.5rem; /* Adjust font size as needed */
     font-weight: 600;
-    color: #333333; /* Use the appropriate color from your design */
+    color: var(--primary-color); /* Use the appropriate color from your design */
     margin-top: 30px; /* Space above the description */
     padding: 0 220px; /* Add padding on the left and right sides */
     line-height: 1.5; /* Improve readability with line height */
     text-align: center; /* Center-align the text */
 }
 
-/* Optional: Add a media query for responsive design */
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-description {
         font-size: 1.25rem; /* Adjust font size for smaller screens */
         padding: 0 20px; /* Reduce padding on smaller screens */
     }
+
+    .video-container {
+        padding-bottom: 55%; /* Adjust padding for better aspect ratio on smaller screens */
+    }
+
+    .logo-container {
+        padding: 15px; /* Reduce padding for smaller logo on smaller screens */
+    }
+
+    .logo img {
+        width: 60px; /* Decrease logo size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-description {
+        font-size: 1rem; /* Further reduce font size for mobile */
+        padding: 0 10px; /* Further reduce padding on very small screens */
+    }
+
+    .logo img {
+        width: 50px; /* Further decrease logo size for very small screens */
+    }
+}
+
+#typed-output {
+    display: inline-block; /* Ensure the output is treated as an inline block */
+    /* Uncomment if you want a blinking cursor effect */
+    /* border-right: 2px solid var(--primary-color); */
 }
 
 /*=================== service section==============================*/
-.services-section {
-    padding: 80px 20px; /* Adjusted for more padding */
-    background-color: #F2F5F2; /* Light background color */
-}
 
 .service-card {
     background-color: white; /* Card background */
@@ -166,6 +465,7 @@ body {
 
 .text-start h2,
 .text-end p {
+    color: var(--primary-color);
     margin-bottom: 30px; /* Margin to space out elements */
 }
 
@@ -215,130 +515,145 @@ body {
 
 /*===================== Partners ===========================*/
 /* Trusted Partners Carousel */
+
 #trusted-partners .owl-carousel-partners .item {
-    height: 150px; /* Set a fixed height for all items */
+    height: 50px; /* Set a fixed height for all items */
     display: flex;
     align-items: center; /* Vertically center the content */
     justify-content: center; /* Horizontally center the content */
     background-color: rgba(0, 0, 0, 0); /* Optional: Set a background color for visual consistency */
-    border: 1px solid #eaeaea; /* Optional: Add a border for separation */
+/*    border: 1px solid #eaeaea; /* Optional: Add a border for separation */*/
     padding: 10px; /* Add some padding for spacing around the logos */
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better appearance */
+/*    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better appearance */*/
 }
 
 /*===================== Press Release ================================*/
 #press-release {
-    background-color: #f8f9fa; /* Light background color for contrast */
+    padding: 3rem 0;
+    background-color: var(--bg-color-5);
+}
+
+#press-release .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 #press-release .owl-carousel-press {
-    display: flex; /* Ensure flex layout for the carousel */
+    display: flex; /* Ensures flex layout for carousel items */
+}
+
+#press-release .owl-carousel-press .item {
+    height: 100%; /* Ensures each carousel item fills the available height */
+    display: flex;
+    flex-direction: column;
 }
 
 #press-release .card {
-    border: none; /* Remove default card border */
-    border-radius: 8px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
-    display: flex; /* Use flexbox for card layout */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: space-between; /* Space between items */
-    height: 100%; /* Allow cards to stretch to fill the parent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px; /* Fixed or minimum height for consistency */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 #press-release .card img {
-    height: 150px; /* Set a fixed height for the image */
-    object-fit: cover; /* Maintain aspect ratio */
+    height: 150px; /* Fixed height for image */
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 #press-release .card-body {
-    flex-grow: 1; /* Allow the body to grow to take up remaining space */
-}
-
-#press-release .card:hover {
-    transform: translateY(-5px); /* Lift the card slightly on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    flex-grow: 1; /* Ensures body stretches to fill remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
 }
 
 #press-release .card-title {
-    font-size: 1.25rem; /* Slightly larger font size for the title */
-    font-weight: 600; /* Make the title bold */
-    color: #333; /* Darker color for readability */
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
 }
 
 #press-release .card-text {
-    color: #666; /* Subtle gray color for the text */
+    color: var(--color-70);
 }
 
-/* Navigation and Dots Styles for both Carousels */
-.owl-carousel-partners .owl-nav button,
+#press-release .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Navigation and Dots Styles */
 .owl-carousel-press .owl-nav button {
-    background-color: #333; /* Dark background for navigation buttons */
-    color: #fff; /* White text color for contrast */
-    border: none; /* Remove default border */
-    padding: 5px 10px; /* Padding for a better look */
-    border-radius: 50%; /* Circular buttons */
-    margin: 5px; /* Small margin for spacing */
-    transition: background-color 0.3s; /* Smooth hover effect */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin: 5px;
+    transition: background-color 0.3s;
 }
 
-.owl-carousel-partners .owl-nav button:hover,
 .owl-carousel-press .owl-nav button:hover {
-    background-color: #555; /* Lighter shade on hover */
+    background-color: #555;
 }
 
-.owl-carousel-partners .owl-dots .owl-dot span,
 .owl-carousel-press .owl-dots .owl-dot span {
-    width: 10px; /* Dot width */
-    height: 10px; /* Dot height */
-    background-color: #333; /* Dark color for dots */
-    border-radius: 50%; /* Circular dots */
-    margin: 5px; /* Spacing between dots */
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 5px;
 }
 
-.owl-carousel-partners .owl-dots .owl-dot.active span,
 .owl-carousel-press .owl-dots .owl-dot.active span {
-    background-color: #007bff; /* Blue color for active dot */
+    background-color: #007bff;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    #trusted-partners .owl-carousel-partners .item {
-        height: 120px; /* Adjust height for smaller screens */
-    }
-
     #press-release .card img {
-        height: 120px; /* Adjust image height for smaller screens */
+        height: 120px;
     }
 
     #press-release .card-title {
-        font-size: 1rem; /* Decrease font size on smaller screens */
+        font-size: 1rem;
+    }
+
+    #press-release .card {
+        min-height: 350px;
     }
 }
 
 @media (max-width: 576px) {
-    #trusted-partners .owl-carousel-partners .item {
-        height: 100px; /* Further adjust height for extra small screens */
-    }
-
     #press-release .card img {
-        height: 100px; /* Further adjust image height for extra small screens */
+        height: 100px;
     }
 
     #press-release .card-title {
-        font-size: 0.9rem; /* Further decrease font size on extra small screens */
+        font-size: 0.9rem;
+    }
+
+    #press-release .card {
+        min-height: 300px;
     }
 }
 
+
 /*=============== contact ===================*/
 .contact .form-container {
-    padding: 20px;
     border-radius: 5px;
 }
 
 .contact .form-header {
     font-size: 1.2rem;
-    margin-bottom: 10px;
 }
 
 .contact .highlight-text {
@@ -366,6 +681,11 @@ body {
 }
 
 /*================== footer ======================*/
+/* Set footer to be opaque */
+footer {
+    background-color: #f8f9fa; /* Ensure it's not transparent */
+    opacity: 1; /* Ensure opacity is set to 1 */
+}
 .footer .social-icons a {
     font-size: 1.25rem;
     color: var(--dark-gray-color); /* Adjust the color to match your design */
@@ -509,7 +829,7 @@ body {
 }
 
 .our-team-right {
-  margin-top: -30px;
+  padding-top: -30px;
 }
 
 .team-image {
@@ -540,7 +860,7 @@ body {
   }
 
   .our-team-right {
-    margin-top: 20px;
+    padding-top: 20px;
     position: relative;
   }
 

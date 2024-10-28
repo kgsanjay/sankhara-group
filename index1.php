@@ -8,6 +8,8 @@
     <link rel="icon" href="assets/images/logo/sh-logo.png" type="image/png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
 
     <!-- Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -18,30 +20,52 @@
     <?php include 'navbar.php'; ?>
 
 <section class="hero">
-    <div class="container">
-        <div class="video-container" data-src="assets/images/logo/sh-video.mp4">
+    <div class="container custom-container">
+        <div class="hero-content">
+            <span class="text-muted">"Collaborate Effortlessly: Empower Your Group with Seamless Online Solutions"</span>
+            <h4 class="mt-1">"We Sankhara Group is a community of innovators committed to delivering exceptional products and services that inspire creativity and drive sustainable growth."</h4>
+            <button class="btn btn-custom mt-2 mb-2">Lets Connect</button> 
+        </div>
+        <div class="hero-img">
+            <img src="assets/images/hero/hero-home.png" class="img-fluid">
+        </div>
+        <div class="logo-section2">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="assets/images/logo/sh-logo.png" alt="SH Logo">
+                </div>
+            </div><br>
+            
+        </div>
+        
+       <!--  <div class="video-container " data-src="assets/images/logo/sh-video.mp4">
             <video autoplay muted loop playsinline loading="lazy">
-                <source src="assets/images/logo/sh-home.mp4" type="video/mp4">
+                <source src="assets/images/logo/sh-home1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
         <div class="logo-section">
-            <div class="logo-container">
+            <div class="logo-container ">
                 <div class="logo">
-                    <!-- Replace with your SH logo -->
                     <img src="assets/images/logo/sh-logo.png" alt="SH Logo">
                 </div>
-            </div>
-            <p class="hero-description">We Sankhara Group is a community of innovators committed to delivering exceptional products and services that inspire creativity and drive sustainable growth.</p>
+            </div><br>
+            <div class="hero-description">
+                <span id="typed-output"></span>
+            </div> -->
+            
         </div>
     </div>
 </section>
 
-<section class="services-section">
+
+
+
+<section class="services-section bg-5 py-5">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 text-start"> <!-- Left-aligned column -->
-                <h2>We Deliver Extraordinary<br>Exceptional Experiences.</h2>
+                <h2>We Deliver <u>Extraordinary</u><br>Exceptional Experiences.</h2>
             </div>
             <div class="col-lg-6 text-end"> <!-- Right-aligned column -->
                 <p>
@@ -51,8 +75,8 @@
                 </p>
             </div>
         </div>
-        <div class="container mt-5 mb-4">
-            <div class="row services-container"> <!-- Added row for service cards -->
+        <div class="container custom-container mt-5 mb-4">
+            <div class="row services-container custom-container"> <!-- Added row for service cards -->
                 <div class="col-lg-6 mb-4"> <!-- Each card occupies half the width -->
                     <div class="service-card d-flex flex-column p-4 align-items-center justify-content-center"> <!-- Added flex-column for consistent height -->
                         <div class="row align-items-center justify-content-center"> <!-- Align items vertically -->
@@ -139,9 +163,9 @@
 </section> -->
 
 <!-- Trusted Partners Section -->
-<section id="trusted-partners" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Our Trusted Partners</h2>
+<section id="trusted-partners" class="py-5 bg-10">
+    <div class="container custom-container">
+        <h2 class="text-center mb-4 section-title">Our Trusted Partners</h2>
         
         <div class="owl-carousel owl-carousel-partners owl-theme">
             <div class="item d-flex align-items-center justify-content-center">
@@ -164,11 +188,11 @@
 </section>
 
 <!-- Press Release Section -->
-<section id="press-release" class="py-5 bg-light">
-    <div class="container">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2>Press Release</h2>
-            <a href="path/to/your/press/releases" class="btn">See All <i class="fas fa-arrow-right"></i></a>
+<section id="press-release" class="py-5 bg-5">
+    <div class="container custom-container">
+        <div class="section-title d-flex justify-content-between align-items-center mb-4">
+            <h2 class="section-title">Press Release</h2>
+            <a href="path/to/your/press/releases" class="btn">See All <i class="fas fa-arrow-right section-title"></i></a>
         </div>
         <div class="owl-carousel owl-carousel-press owl-theme">
             <div class="item">
@@ -203,19 +227,19 @@
 </section>
 
 
-<section class="blog mt-5 mb-3">
-    <div class="container">
-        <div class="blog-section-title">
-            <h4 class="bg-light p-1">Blogs that make unleashing Impact.</h4>
+<section class="blog bg-10 py-5">
+    <div class="container custom-container">
+        <div class="blog-section-title bg-30">
+            <h4 class="p-1 section-title">Blogs that make unleashing Impact.</h4>
         </div>
         <div class="owl-carousel owl-carousel-blog owl-theme">
-            <div class="item blog-card p-1 bg-light d-flex flex-column align-items-center justify-content-center">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
+            <div class="item blog-card p-1 gradient-background rounded d-flex flex-column align-items-center justify-content-center">
+                <div class="row align-items-start justify-content-start">
+                    <div class="col-lg-4 d-flex align-items-center justify-content-center">
                         <img src="assets/images/blog/1.png" alt="Sankhara Support Icon" class="img-fluid p-2">
                     </div>
                     <div class="col-lg-6 align-items-center justify-content-center">
-                        <h3 class="p-4">Tech news delivering insights, trends, and breakthroughs to keep you informed and inspired.</h3>
+                        <h3 class="p-4 text-white">Tech news delivering insights, trends, and breakthroughs to keep you informed and inspired.</h3>
                     </div>
                 </div>
             </div>
@@ -224,24 +248,24 @@
         </div>
     </div>
 </section>
-<section class="contact mt-5 mb-3">
-    <div class="container my-5">
+<section class="contact bg-5 py-5">
+    <div class="container custom-container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="form-container">
+                <div class="form-container custom-container">
                     <!-- Step Indicator -->
                     <span class="step-indicator" id="stepIndicator">STEP 1 OF 3</span>
 
                     <!-- Form Header -->
-                    <h2 class="form-header pb-3">
+                    <h2 class="form-header ">
                         Start your <b><span class="highlight-text">journey</span></b> with us today with applications
                     </h2>
 
                     <!-- Multi-step Form -->
-                    <form id="multiStepForm" method="POST" action="subscribe.php">
+                    <form id="multiStepForm" method="POST" action="subscribe.php" class="bg-20 p-4 rounded">
                         <!-- Step 1: Name -->
                         <div class="step" id="step-1">
-                            <div class="mb-3">
+                            <div>
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
                             </div>
                             <button type="button" class="btn btn-primary" id="next-1">Next</button>
@@ -249,7 +273,7 @@
 
                         <!-- Step 2: Phone Number -->
                         <div class="step hidden" id="step-2">
-                            <div class="mb-3">
+                            <div>
                                 <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter your phone number" required>
                             </div>
                             <button type="button" class="btn btn-secondary" id="prev-2">Previous</button>
@@ -258,7 +282,7 @@
 
                         <!-- Step 3: Email -->
                         <div class="step hidden" id="step-3">
-                            <div class="mb-3">
+                            <div>
                                 <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
                             </div>
                             <button type="button" class="btn btn-secondary" id="prev-3">Previous</button>
@@ -384,25 +408,25 @@
 
         // Initialize Press Release Carousel
         $('.owl-carousel-press').owlCarousel({
-            loop: true,
-            margin: 10,
-            nav: false,
-            dots: false,
-            autoplay: true,
-            autoplayTimeout: 4000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2 // Display 2 items on small screens
-                },
-                1000: {
-                    items: 4 // Display 3 items on larger screens
-                }
-            }
-        });
+    items: 4, // Number of items per view
+    margin: 10,
+    autoHeight: true, // Enables consistent height for all items
+    loop: true,
+    nav: false,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1
+        },
+        768: {
+            items: 2
+        },
+        1024: {
+            items: 4
+        }
+    }
+});
+
 
         // Initialize Blog Carousel
         $('.owl-carousel-blog').owlCarousel({
@@ -427,6 +451,32 @@
         });
     });
 </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const options = {
+            strings: [
+                "We Sankhara Group is a community of innovators committed to delivering exceptional products and services that inspire creativity and drive sustainable growth."
+            ],
+            typeSpeed: 30,   // Speed of typing
+            backSpeed: 0,     // No backspacing
+            startDelay: 500,  // Wait before typing starts
+            showCursor: false,  // Show blinking cursor
+            onComplete: (self) => {
+                self.cursor.remove(); // Optionally remove the blinking cursor after typing is complete
+            }
+        };
+
+        new Typed('#typed-output', options);
+    });
+</script>
+
+
+
+
+
+
 
 
 </body>
