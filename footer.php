@@ -1,19 +1,18 @@
-<footer class="footer bg-light py-5">
+<footer class="footer bg-light py-5 text-dark" >
     <div class="container">
         <div class="row">
             <!-- Company Logo and Description -->
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-2">
                 <a href="#">
-                    <img src="assets/images/logo/sh-group-logo.png" alt="Sankhara Group" class="img-fluid mb-3" width="50%">
+                    <img src="assets/images/logo/sh-logo-socialmedia.png" alt="Sankhara Group" class="img-fluid mb-3" width="50%">
                 </a>
-                <p class="text-muted">
-                    We Sankhara Group is a community of innovators committed to delivering exceptional products and services that inspire creativity and drive sustainable growth.
-                </p>
-                <div class="social-icons">
+                
+                <div class="social-icons ">
                     <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 

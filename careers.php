@@ -23,7 +23,7 @@
 
     <!-- About Us Section -->
     <section id="sg-about" class="sg-about py-5">
-        <div class="container">
+        <div class="container custom-container ">
             <div class="row align-items-center">
                 <div class="col-lg-8 p-2 wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
                     <h2 class="sg-about-title">Join the team driving innovation <br>and shaping the future of work.</h2>
@@ -36,12 +36,8 @@
         </div>
     </section>
 
-    <section class="current-job py-4">
-            
-            
-
-    
-    <div class="container">
+    <section class="current-job bg-white py-4">    
+    <div class="container custom-container ">
         <a href="" class="btn btn-light">Jobs</a>
             <h3 class="pt-3">Current Job Openings</h3>
     <div class="accordion" id="jobAccordion">
@@ -108,7 +104,7 @@
     </section>
 
     <section class="py-5" style="background-color: #2b2b2b;">
-        <div class="container">
+        <div class="container custom-container ">
             <div class="row ">
                 <div class="col-lg-6 d-flex align-items-center justify-content-center">
                     <h4 class="text-white">Subscribe to us and get the latest<br> updates</h4>

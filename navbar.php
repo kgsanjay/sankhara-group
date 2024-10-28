@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
-    <div class="container">
+    <div class="container custom-container">
         <a class="navbar-brand" href="./">
             <img src="assets/images/logo/sh-group-logo.png" alt="Sankhara Group" height="100"> <!-- Replace with your logo path -->
         </a>
@@ -13,7 +13,7 @@
                         Businesses
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Digital</a></li>
+                        <li><a class="dropdown-item" href="sankhara-digital">Digital</a></li>
                         <li><a class="dropdown-item" href="sankhara-tech">Tech</a></li>
                         <li><a class="dropdown-item" href="#">Courses</a></li>
                         <li><a class="dropdown-item" href="#">Support</a></li>
@@ -23,7 +23,7 @@
                     <a class="nav-link" href="about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Insights</a>
+                    <a class="nav-link" href="press-release">Press Release</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="careers">Careers</a>

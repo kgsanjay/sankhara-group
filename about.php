@@ -22,11 +22,11 @@
     <?php include 'navbar.php'; ?>
 
     <!-- About Us Section -->
-    <section id="sg-about" class="sg-about py-5">
-        <div class="container">
+    <section id="sg-about" class="sg-about bg-10 py-5">
+        <div class="container custom-container">
             <div class="row align-items-center">
                 <div class="col-lg-7 wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <p class="sg-about-tagline">Collaborate | Empower | Grow</p>
+                    <p class="sg-about-tagline ">Collaborate | Empower | Grow</p>
                     <h2 class="sg-about-title">About us</h2>
                     <p class="sg-about-text">
                         We are a dynamic team of creatives and technologists dedicated to crafting innovative digital solutions. Our expertise in design and technology allows us to transform ideas into exceptional user experiences, helping businesses grow and thrive in an ever-evolving digital landscape. We are a dynamic team of creatives.
@@ -41,7 +41,7 @@
 
     <!-- Statistics Section -->
     <section id="statistics" class="bg-light">
-        <div class="container">
+        <div class="container custom-container">
             <div class="row text-center">
                 <div class="col-md-3 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
                     <div class="stat-box">
@@ -73,13 +73,13 @@
 
     <!-- Our Mission Section -->
     <section id="mission" class="py-5">
-        <div class="container">
+        <div class="container custom-container">
             <div class="row align-items-center">
                 <div class="col-lg-6 wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <p>Collaborate | Empower | Grow</p>
-                    <h2>Our Mission</h2>
+                    <p class="text-custom"><b>Collaborate | Empower | Grow</b></p>
+                    <h2 class="text-custom">Our Mission</h2>
                 </div>
-                <div class="col-lg-6 wow animate__animated animate__fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="col-lg-6 wow animate__animated animate__fadeInRight text-custom" data-wow-duration="1s" data-wow-delay="0.4s">
                     <p align="right">We specialize in crafting exceptional digital experiences, seamlessly blending innovation and creativity to deliver unforgettable interactions that captivate and inspire our clients and their audiences.</p>
                 </div>
                 <div class="col-lg-12 wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
@@ -91,7 +91,7 @@
 
     <!-- Join Our Team Section -->
     <section id="join-team" class="py-5">
-        <div class="container">
+        <div class="container custom-container">
             <div class="row bg-light">
                 <h4 class="py-2" align="left wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Join Our Team</h4>
             </div>
@@ -107,7 +107,7 @@
     </section>
 
     <div class="team-section">
-        <div class="container">
+        <div class="container custom-container">
             <div class="row team-bg align-items-center position-relative">
                 <!-- Left content -->
                 <div class="col-lg-7 wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -124,7 +124,7 @@
     </div>
 
     <section id="call-to-action" class=" py-5">
-        <div class="container">
+        <div class="container custom-container">
             <div class="row">
                 <div class="col-md-12 text-center wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                     <h2>Let's Build Your Dream Together</h2>
