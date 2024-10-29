@@ -26,7 +26,7 @@
             <h4 class="mt-1">"We Sankhara Group is a community of innovators committed to delivering exceptional products and services that inspire creativity and drive sustainable growth."</h4>
             <button class="btn btn-custom mt-2 mb-2">Lets Connect</button> 
         </div>
-        <div class="hero-img">
+        <!-- <div class="hero-img">
             <img src="assets/images/hero/hero-home.png" class="img-fluid">
         </div>
         <div class="logo-section2">
@@ -36,11 +36,11 @@
                 </div>
             </div><br>
             
-        </div>
+        </div> -->
         
-       <!--  <div class="video-container " data-src="assets/images/logo/sh-video.mp4">
+        <div class="video-container " data-src="assets/images/logo/sh-video.mp4">
             <video autoplay muted loop playsinline loading="lazy">
-                <source src="assets/images/logo/sh-home1.mp4" type="video/mp4">
+                <source src="assets/images/logo/sankhara-logo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -50,16 +50,12 @@
                     <img src="assets/images/logo/sh-logo.png" alt="SH Logo">
                 </div>
             </div><br>
-            <div class="hero-description">
+            <!-- <div class="hero-description">
                 <span id="typed-output"></span>
             </div> -->
-            
         </div>
     </div>
 </section>
-
-
-
 
 <section class="services-section bg-5 py-5">
     <div class="container-fluid">
@@ -142,25 +138,18 @@
     </div>
 </section>
 
-<!-- <section class="rotate-section">
-    <div class="circle-text">
-        <span>#</span>
-        <span>S</span>
-        <span>a</span>
-        <span>n</span>
-        <span>k</span>
-        <span>h</span>
-        <span>a</span>
-        <span>r</span>
-        <span>a</span>
-        <span>G</span>
-        <span>r</span>
-        <span>o</span>
-        <span>u</span>
-        <span>p</span>
+<section class="succeed py-5 bg-5">
+    <div class="container custom-container">
+        <div class="succeed-grid">
+            <h1 class="succeed">SUCCEED</h1>
+            <div class="logo-sankhara">
+                <img src="assets/images/logo/group.png" alt="Sankhara Group Logo">
+            </div>
+            <h1 class="strategize">STRATEGIZE</h1>
+            <h1 class="sustain">SUSTAIN</h1>
+        </div>
     </div>
-    
-</section> -->
+</section>
 
 <!-- Trusted Partners Section -->
 <section id="trusted-partners" class="py-5 bg-10">
