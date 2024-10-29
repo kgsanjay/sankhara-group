@@ -4,7 +4,7 @@
             <!-- Company Logo and Description -->
             <div class="col-md-3 mb-2">
                 <a href="#">
-                    <img src="assets/images/logo/sh-logo-socialmedia.png" alt="Sankhara Group" class="img-fluid mb-3" width="50%">
+                    <img src="assets/images/logo/sh-logo-socialmedia.png" alt="Sankhara Group" class="img-fluid mb-3" width="40%">
                 </a>
                 
                 <div class="social-icons ">

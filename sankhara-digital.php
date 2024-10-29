@@ -203,7 +203,7 @@
             </div>
 
             <div class="col-md-6 d-flex align-items-center">
-                <div class="owl-carousel owl-theme">
+                <div class="owl-carousel owl-carousel-portfolio owl-theme">
                     <div class="item"><img alt="creative" src="assets/images/about/team.png" class="img-fluid"></div>
                     <div class="item"><img alt="creative" src="assets/images/about/team.png" class="img-fluid"></div>
                     <div class="item"><img alt="creative" src="assets/images/about/team.png" class="img-fluid"></div>
@@ -218,31 +218,121 @@
     </div>
 </section>
 
+<!-- ====== Our Clients Section Start ====== -->
+<section id="our-clients" class="py-5 bg-digital">
+  <div class="container custom-container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="mx-auto pb-4">
+          <h2 class="section-title text-white">Our Esteemed Clients</h2>
+        </div>
+      </div>
+    </div>
 
-    <div class="team-section bg-digital py-5">
+    <div class="row">
+  <div class="owl-carousel our-clients-carousel owl-theme">
+    <!-- Client Image 1 -->
+    <div class="client-item">
+      <img src="assets/images/clients/1.png" alt="Client 1" class="client-logo" loading="lazy" />
+    </div>
+    <!-- Client Image 2 -->
+    <div class="client-item">
+      <img src="assets/images/clients/2.png" alt="Client 2" class="client-logo" loading="lazy" />
+    </div>
+    <!-- Client Image 3 -->
+    <div class="client-item">
+      <img src="assets/images/clients/3.png" alt="Client 3" class="client-logo" loading="lazy" />
+    </div>
+    <!-- Client Image 4 -->
+    <div class="client-item">
+      <img src="assets/images/clients/4.png" alt="Client 4" class="client-logo" loading="lazy" />
+    </div>
+    <!-- Client Image 5 -->
+    <div class="client-item">
+      <img src="assets/images/clients/5.png" alt="Client 5" class="client-logo" loading="lazy" />
+    </div>
+    <!-- Client Image 6 -->
+    <div class="client-item">
+      <img src="assets/images/clients/6.png" alt="Client 6" class="client-logo" loading="lazy" />
+    </div>
+    
+  </div>
+</div>
+
+  </div>
+</section>
+<!-- ====== Our Clients Section End ====== -->
+
+<section class="testimonials-section py-5">
+    <div class="container custom-container py-5" style="background-color: #131313;">
+        <h2 class="mb-3 px-4 text-white">Testimonials</h2>
+        <div class="owl-carousel owl-carousel-testimonials owl-theme">
+            <div class="item">
+                <div class="testimonial-card p-4 text-white">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="assets/images/testi/1.png" alt="User Image" class="user-image me-3">
+                        <div class="text-start">
+                            <h5 class="mb-0">Zoe Mantis</h5>
+                            <p class="mb-0">Founder, Alpha Group</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-card p-4 text-white">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://via.placeholder.com/50" alt="User Image" class="user-image me-3">
+                        <div class="text-start">
+                            <h5 class="mb-0">Don Joe</h5>
+                            <p class="mb-0">Founder, Alpha Group</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="testimonial-card p-4 text-white">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://via.placeholder.com/50" alt="User Image" class="user-image me-3">
+                        <div class="text-start">
+                            <h5 class="mb-0">Zoe Mantis</h5>
+                            <p class="mb-0">Founder, Alpha Group</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonumy eirmod.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <section class="team-section bg-digital py-5">
         <div class="container custom-container">
-            <div class="row team-bg align-items-center position-relative bg-light text-custom">
+            <div class="row team-bg align-items-center position-relative text-custom" style="background-color: #EBEFEB;">
                 <!-- Left content -->
                 <div class="col-lg-7 wow animate__animated animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
                     <h2>We believe in being early adopters of new tech, innovating without boundaries, and contributing actively to the open-source community.</h2>
                     <a href="#" class="btn-green mt-5">Meet our team <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <!-- Right content (Image) -->
-                <div class="col-lg-5 our-team-right position-relative wow animate__animated animate__fadeInRight" data-wow-duration="1s" data-wow-delay="0.7s">
+                <div class="col-lg-5 our-team-right position-relative wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
                     <h2><i>Our team!</i></h2>
                     <img src="assets/images/about/team.png" class="team-image" alt="Team meeting">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <section id="call-to-action" class="gradient-background py-5">
         <div class="container custom-container">
-            <div class="row">
-                <div class="col-md-12 text-center wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                    <h2 class="text-white">Let's Build Your Dream Together</h2>
-                    <p>Lorem Ipsum Statement</p>
-                    <a href="#" class="btn btn-custom wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">Let's Connect</a>
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-md-6 text-center wow animate__animated animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                    <h3 class="text-white px-5">What's Stopping You? Let's build your dream together</h3>
+                    <!-- <p>Lorem Ipsum Statement</p> -->
+                    <a href="#" class="btn btn-custom text-white wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">Schedule Call</a>
                 </div>
             </div>
         </div>
@@ -268,7 +358,21 @@
 
     <script>
     $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
+         $(".our-clients-carousel").owlCarousel({
+      items: 6,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      responsiveClass: true,
+      responsive: {
+        0: { items: 2 },
+        600: { items: 4 },
+        1000: { items: 6 } // Display 6 items on larger screens
+      }
+    });
+
+
+        $(".owl-carousel-portfolio").owlCarousel({
             items: 1, // Number of items visible at once
             loop: true,
             autoplay: true,
@@ -287,6 +391,28 @@
                 }
             }
         });
+
+         $(".owl-carousel-testimonials").owlCarousel({
+            items: 3, // Number of items visible at once
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000, // Time in ms between transitions
+            autoplayHoverPause: true, // Pause on hover
+            margin: 10, // Space between items
+            responsive: {
+                0: {
+                    items: 1 // For mobile screens
+                },
+                768: {
+                    items: 2 // For tablets
+                },
+                992: {
+                    items: 3 // For larger screens
+                }
+            }
+        });
+
+
     });
 </script>
 <script type="text/javascript">
@@ -325,9 +451,6 @@ document.querySelector('.close').addEventListener('click', function() {
     $('#videoModal').modal('hide'); // Hide the modal
 });
 </script>
-
-
-
 
 
 

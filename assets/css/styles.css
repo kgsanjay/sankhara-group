@@ -347,21 +347,23 @@ body {
 
 .video-container {
     position: relative;
-    padding-bottom: 30.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
+    padding-bottom: 30.25%; /* Aspect ratio */
     height: 0;
     overflow: hidden;
-    border-radius: 8px; /* Rounded corners for the video */
-    margin-bottom: 30px; /* Space below the video */
+    border-radius: 8px;
+    margin: 0 auto 30px; /* Center container horizontally and add bottom margin */
+    width: 80%; /* Set container width to 80% */
 }
 
 .video-container video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; /* Fill container's width */
     height: 100%;
-    object-fit: cover; /* Ensure the video covers the container */
+    object-fit: cover;
 }
+
 
 .logo-section {
     position: relative;
@@ -553,7 +555,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 400px; /* Fixed or minimum height for consistency */
+    min-height: 330px; /* Fixed or minimum height for consistency */
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1054,3 +1056,101 @@ footer {
             display: flex;
             align-items: center;
         }
+
+/*==================== success =========================*/
+/* Container grid styling */
+.succeed-grid {
+    display: grid;
+    grid-template-areas: 
+        "succeed . strategize"
+        "sustain logo .";
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color); /* Green color similar to the image */
+    padding: 2rem;
+}
+
+/* Styling for the text */
+.succeed, .sustain, .strategize {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.succeed {
+    grid-area: succeed;
+    align-self: start;
+    justify-self: start;
+}
+
+.sustain {
+    grid-area: sustain;
+    align-self: end;
+    justify-self: start;
+}
+
+.strategize {
+    grid-area: strategize;
+    justify-self: end;
+}
+
+/* Styling for the logo */
+.logo-sankhara {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 2rem 0;
+}
+
+.logo-sankhara img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    /* Adjust font size for medium screens */
+    .succeed, .sustain, .strategize {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stacking layout for smaller screens */
+    .succeed-grid {
+        grid-template-areas: 
+            "succeed"
+            "logo-sankhara"
+            "strategize"
+            "sustain";
+        text-align: center;
+    }
+
+    .succeed, .sustain, .strategize {
+        justify-self: center;
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+
+    .logo-sankhara {
+        width: 60px;
+        height: 60px; /* Smaller logo for mobile */
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for extra-small screens */
+    .succeed, .sustain, .strategize {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .logo-sankhara {
+        width: 50px;
+        height: 50px;
+    }
+}

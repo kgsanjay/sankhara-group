@@ -320,3 +320,107 @@ h3 span {
     border-radius: 10px; /* Optional: rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: shadow effect */
 }
+
+
+
+/* ====== Our Clients Section CSS ====== */
+#our-clients .section-title {
+    font-size: 32px;
+    color: #003366; /* Dark blue color for title */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.our-clients-carousel .client-item {
+    text-align: center;
+    background-color: #181818;
+    padding: 30px;
+    width: 200px; /* Set fixed width for 2:1 aspect ratio */
+    height: 100px; /* Set height to maintain 2:1 ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.our-clients-carousel .client-item:hover {
+    transform: scale(1.05); /* Slight scale on hover for effect */
+}
+
+.our-clients-carousel .client-logo {
+    max-width: 80%; /* Adjust to fit within the client item */
+    height: auto; /* Maintain aspect ratio */
+    filter: grayscale(100%); /* Grayscale effect */
+    transition: filter 0.3s ease;
+}
+
+.our-clients-carousel .client-logo:hover {
+    filter: grayscale(0); /* Remove grayscale on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #our-clients .section-title {
+        font-size: 24px;
+    }
+
+    .our-clients-carousel .client-item {
+        width: 150px; /* Adjust width for smaller screens */
+        height: 75px; /* Adjust height for smaller screens */
+    }
+
+    .our-clients-carousel .client-logo {
+        max-width: 80px; /* Adjust logo size on smaller screens */
+    }
+}
+
+/*================== testimonials ====================*/
+
+
+.testimonials-section {
+    color: white;
+}
+
+.testimonials-section .testimonial-card {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.testimonials-section .testimonial-card .testimonial-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #adb5bd;
+}
+
+/* Style for the user image */
+.testimonials-section .testimonial-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Target the dots container */
+.owl-carousel-testimonials .owl-dots .owl-dot {
+    display: inline-block;
+    margin: 0 5px; /* Add space between dashes */
+}
+
+/* Customize each dot to look like a dash */
+.owl-carousel-testimonials .owl-dots .owl-dot span {
+    display: inline-block;
+    width: 30px;         /* Make the dot wider to look like a dash */
+    height: 4px;         /* Adjust height to make it look like a dash */
+    background-color: #fff; /* Set the color of the dash */
+    border-radius: 3px;  /* Rounding the edges slightly */
+    opacity: 0.5;        /* Set opacity for unselected dash */
+    transition: all 0.3s ease;
+}
+
+/* Active dot (dash) style */
+.owl-carousel-testimonials .owl-dots .owl-dot.active span {
+    opacity: 1;               /* Full opacity for the active dash */
+    background-color: #fff; /* Highlight color for the active dash */
+}
