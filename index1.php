@@ -38,9 +38,9 @@
             
         </div> -->
         
-        <div class="video-container " data-src="assets/images/logo/sh-video.mp4">
+        <div class="video-container " data-src="assets/images/logo/sankahara-logo.mp4">
             <video autoplay muted loop playsinline loading="lazy">
-                <source src="assets/images/logo/sankhara-logo.mp4" type="video/mp4">
+                <source src="assets/images/logo/sankahara-logo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
