@@ -22,9 +22,9 @@
 <section class="hero">
     <div class="container custom-container">
         <div class="hero-content">
-            <span class="text-muted">"Collaborate Effortlessly: Empower Your Group with Seamless Online Solutions"</span>
-            <h4 class="mt-1">"We Sankhara Group is a community of innovators committed to delivering exceptional products and services that inspire creativity and drive sustainable growth."</h4>
-            <button class="btn btn-custom mt-2 mb-2">Lets Connect</button> 
+            <p class="text-muted mt-5">"Collaborate Effortlessly: Empower Your Group with Seamless Online Solutions"</p>
+            <h1 class="mt-3">"We Sankhara Group is a community of innovators committed to delivering exceptional products and services that inspire creativity and drive sustainable growth."</h1>
+            <button class="btn btn-custom mt-5 mb-5">Lets Connect</button> 
         </div>
         <!-- <div class="hero-img">
             <img src="assets/images/hero/hero-home.png" class="img-fluid">
@@ -38,7 +38,7 @@
             
         </div> -->
         
-        <div class="video-container " data-src="assets/images/logo/sankahara-logo.mp4">
+        <div class="video-container mt-1 " data-src="assets/images/logo/sankahara-logo.mp4">
             <video autoplay muted loop playsinline loading="lazy">
                 <source src="assets/images/logo/sankahara-logo.mp4" type="video/mp4">
                 Your browser does not support the video tag.
