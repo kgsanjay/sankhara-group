@@ -276,7 +276,8 @@ body {
 }
 
 .hero-content{
-    padding: 0 350px; /* Add padding on the left and right sides */
+    font-family: var(--font-sf-bold);
+    padding: 0 100px; /* Add padding on the left and right sides */
     line-height: 1; /* Improve readability with line height */
     text-align: center; /* Center-align the text */
 }
