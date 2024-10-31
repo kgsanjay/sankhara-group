@@ -222,7 +222,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: var(--primary-color); /* Dark green text color */
+    color: var(--dark-gray-color); /* Dark green text color */
     font-weight: 400; /* Font weight */
     margin-right: 20px; /* Spacing between links */
 }
@@ -266,6 +266,10 @@ body {
 
 .text-custom{
     color: var(--primary-color);
+}
+
+.text-custom-gray{
+    color: var(--dark-gray-color);
 }
 
 
@@ -435,6 +439,7 @@ body {
 
 /*=================== service section==============================*/
 
+
 .service-card {
     background-color: white; /* Card background */
     border-radius: 10px; /* Rounded corners */
@@ -444,6 +449,7 @@ body {
     height: 100%; /* Ensure the card takes the full height */
     transition: transform 0.3s; /* Animation effect on hover */
 }
+
 
 .service-card:hover {
     transform: translateY(-5px); /* Lift effect on hover */
@@ -469,8 +475,7 @@ body {
 
 .text-start h2,
 .text-end p {
-    color: var(--primary-color);
-    margin-bottom: 30px; /* Margin to space out elements */
+    color: var(--dark-gray-color);
 }
 
 /*=================== Rotate text =========================*/
@@ -692,8 +697,12 @@ footer {
 }
 .footer .social-icons a {
     font-size: 1.25rem;
+    text-decoration: none;
     color: var(--dark-gray-color); /* Adjust the color to match your design */
     transition: color 0.3s ease;
+}
+.footer .list-unstyled li a{
+    text-decoration: none;
 }
 
 .footer .social-icons a:hover {
@@ -1059,100 +1068,123 @@ footer {
             align-items: center;
         }
 
-/*==================== success =========================*/
-/* Container grid styling */
-.succeed-grid {
-    display: grid;
-    grid-template-areas: 
-        "succeed . strategize"
-        "sustain logo .";
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color); /* Green color similar to the image */
-    padding: 2rem;
+/*================== testimonials ====================*/
+
+.testimonials-section {
+    color: var(--dark-gray-color);
 }
 
-/* Styling for the text */
-.succeed, .sustain, .strategize {
-    font-size: 3.5rem;
-    font-weight: bold;
-    margin: 0;
+.testimonials-section .testimonial-card {
+    position: relative; /* Make card a positioned element for logo placement */
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
-.succeed {
-    grid-area: succeed;
-    align-self: start;
-    justify-self: start;
+.testimonials-section .testimonial-card .testimonial-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--dark-gray-color);
 }
 
-.sustain {
-    grid-area: sustain;
-    align-self: end;
-    justify-self: start;
+/* Style for the user image */
+.testimonials-section .testimonial-card .user-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.strategize {
-    grid-area: strategize;
-    justify-self: end;
-}
-
-/* Styling for the logo */
-.logo-sankhara {
-    grid-area: logo;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80px;
-    height: 80px;
-    margin: 2rem 0;
-}
-
-.logo-sankhara img {
-    width: 100%;
+/* Style for the top-right logo */
+.testimonials-section .testimonial-logo {
+    position: absolute;
+    top: 10px;     /* Adjust for desired spacing from the top */
+    right: 10px;   /* Adjust for desired spacing from the right */
+    width: 40px;   /* Set logo width */
     height: auto;
 }
 
+/* Star rating style */
+.testimonials-section .star-rating i {
+    color: #ffc107; /* Star color, typically yellow/gold */
+    font-size: 1rem; /* Adjust star size */
+    margin-right: 2px; /* Space between stars */
+}
+
+/* Adjust rating container alignment */
+.testimonials-section .star-rating {
+    display: flex;
+    align-items: center;
+}
+
+/* Customize carousel dots */
+.owl-carousel-testimonials .owl-dots .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.owl-carousel-testimonials .owl-dots .owl-dot span {
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 3px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.owl-carousel-testimonials .owl-dots .owl-dot.active span {
+    opacity: 1;
+    background-color: #fff;
+}
+
+/* ====== Our Clients Section CSS ====== */
+#our-clients .section-title {
+    font-size: 32px;
+    color: #003366; /* Dark blue color for title */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.our-clients-carousel .client-item {
+    text-align: center;
+    background-color: #181818;
+    padding: 10px;
+    width: 200px; /* Set fixed width for 2:1 aspect ratio */
+    height: 100px; /* Set height to maintain 2:1 ratio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.our-clients-carousel .client-item:hover {
+    transform: scale(1.05); /* Slight scale on hover for effect */
+}
+
+.our-clients-carousel .client-logo {
+    max-width: 100%; /* Adjust to fit within the client item */
+    height: auto; /* Maintain aspect ratio */
+    filter: grayscale(100%); /* Grayscale effect */
+    transition: filter 0.3s ease;
+}
+
+.our-clients-carousel .client-logo:hover {
+    filter: grayscale(0); /* Remove grayscale on hover */
+}
+
 /* Responsive adjustments */
-@media (max-width: 992px) {
-    /* Adjust font size for medium screens */
-    .succeed, .sustain, .strategize {
-        font-size: 2.5rem;
-    }
-}
-
 @media (max-width: 768px) {
-    /* Stacking layout for smaller screens */
-    .succeed-grid {
-        grid-template-areas: 
-            "succeed"
-            "logo-sankhara"
-            "strategize"
-            "sustain";
-        text-align: center;
+    #our-clients .section-title {
+        font-size: 24px;
     }
 
-    .succeed, .sustain, .strategize {
-        justify-self: center;
-        font-size: 2rem; /* Smaller font for mobile */
+    .our-clients-carousel .client-item {
+        width: 150px; /* Adjust width for smaller screens */
+        height: 75px; /* Adjust height for smaller screens */
     }
 
-    .logo-sankhara {
-        width: 60px;
-        height: 60px; /* Smaller logo for mobile */
-        margin: 1.5rem 0;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further adjustments for extra-small screens */
-    .succeed, .sustain, .strategize {
-        font-size: 1.5rem;
-        margin: 0.5rem 0;
-    }
-
-    .logo-sankhara {
-        width: 50px;
-        height: 50px;
+    .our-clients-carousel .client-logo {
+        max-width: 80px; /* Adjust logo size on smaller screens */
     }
 }

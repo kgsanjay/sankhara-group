@@ -8,11 +8,11 @@
                 </a>
                 
                 <div class="social-icons ">
-                    <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/sankharagroup/" target="_blank" class="me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@SANKHARAGROUP" target="_blank" class="me-2"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/company/sankharagroup/" target="_blank" class="me-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/sankharagroup" target="_blank" class="me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/919008702706" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
 
